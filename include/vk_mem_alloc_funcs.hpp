@@ -105,8 +105,8 @@ namespace VMA_HPP_NAMESPACE {
                                                                                                                   const AllocationCreateInfo& allocationCreateInfo) const {
     uint32_t memoryTypeIndex;
     VULKAN_HPP_NAMESPACE::Result result = static_cast<VULKAN_HPP_NAMESPACE::Result>( vmaFindMemoryTypeIndex(m_allocator, memoryTypeBits, reinterpret_cast<const VmaAllocationCreateInfo*>(&allocationCreateInfo), &memoryTypeIndex) );
-    VULKAN_HPP_NAMESPACE::detail::resultCheck(result, VMA_HPP_NAMESPACE_STRING "::Allocator::findMemoryTypeIndex");
-    return VULKAN_HPP_NAMESPACE::detail::createResultValueType(result, memoryTypeIndex);
+    VULKAN_HPP_NAMESPACE::resultCheck(result, VMA_HPP_NAMESPACE_STRING "::Allocator::findMemoryTypeIndex");
+    return VULKAN_HPP_NAMESPACE::createResultValueType(result, memoryTypeIndex);
   }
 #endif
   VULKAN_HPP_INLINE VULKAN_HPP_NAMESPACE::Result Allocator::findMemoryTypeIndex(uint32_t memoryTypeBits,
